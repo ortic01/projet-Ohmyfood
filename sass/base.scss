@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@400;500&family=Shrikhand&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+   }
+
+   
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    padding: 0 112px;
+    @media (max-width: 1000px) {
+        padding: 0 16px;
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h3 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+h4 {
+    margin: 0;
+}

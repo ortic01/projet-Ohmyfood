@@ -1,0 +1,22 @@
+@import "../utils/box-shadow.scss";
+@import "../utils/gradien.scss";
+@import"../utils/buttons.scss";
+
+.explorer {
+    text-align: center;
+& h2 {
+    margin-top: 32px;
+    font-size: 32px;
+}
+& p {
+    font-size: 16px;
+}
+& button {
+    @include buttons;
+    @include base-shadow;
+    @include gradient(0.9);      
+}
+& button:hover {
+    transform: scale(1.02);
+    }
+}

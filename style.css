@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
@@ -19,7 +25,15 @@ a {
   color: inherit;
 }
 
-h3, p {
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h4 {
   margin: 0;
 }
 
@@ -29,6 +43,10 @@ header {
   box-shadow: 0 0 8px;
   padding: 4.8px;
   position: relative;
+}
+
+h2 {
+  padding: 0 10px;
 }
 
 main .ville {
@@ -44,7 +62,6 @@ main .ville i {
   font-size: 24px;
 }
 
-/* EXPLORER */
 .explorer {
   text-align: center;
 }
@@ -62,16 +79,13 @@ main .ville i {
   padding: 16px 24px;
   border: none;
   border-radius: 30px;
-  box-shadow: 2px 1px 8px -3px #000000;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   margin-top: 16px;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
-}
-
-h2 {
-  padding: 0 10px;
 }
 
 .fonctions {
@@ -94,7 +108,7 @@ h2 {
   padding: 24px 32px;
   flex-grow: 1;
   border-radius: 16px;
-  box-shadow: 2px 1px 8px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
   margin-right: 35px;
 }
 .fonctions li::before {
@@ -102,13 +116,13 @@ h2 {
   counter-increment: nums;
   color: white;
   background-color: #9356dc;
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  bottom: 6px;
   left: -16px;
   transform: translateY(-50%);
 }
@@ -118,6 +132,7 @@ h2 {
 .fonctions li i {
   margin-right: 16px;
   color: #7e7e7e;
+  font-size: 24px;
 }
 
 .carte {
@@ -175,18 +190,31 @@ h2 {
   height: 85px;
   border-radius: 0 0 16px 16px;
 }
-.carte .description h3, .carte .description p {
-  padding: 8px;
-}
-.carte .description h3 {
-  padding-top: 16px;
-}
 .carte .description i {
   font-size: 32px;
   position: absolute;
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+}
+.carte .description .fa-solid {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.carte .description:hover .fa-solid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+.carte .description h3,
+.carte .description p {
+  padding: 8px;
+}
+.carte .description h3 {
+  padding-top: 16px;
 }
 
 footer {
@@ -201,6 +229,155 @@ footer h2 {
 }
 footer p {
   margin: 16px;
+}
+
+#page-menu-gout .picture img {
+  display: block;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  object-position: bottom;
+}
+#page-menu-gout .titre {
+  margin-top: -60px;
+  border-radius: 32px 32px 0 0;
+  position: relative;
+  background-color: #f6f6f6;
+}
+#page-menu-gout .titre i {
+  font-size: 32px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#page-menu-gout .titre .fa-solid {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+#page-menu-gout .titre:hover .fa-solid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+#page-menu-gout .titre h2 {
+  font-family: "shrikhand", "sans-serif";
+  padding: 32px 16px;
+  border-radius: 32px 32px 0 0;
+  margin: 0;
+}
+#page-menu-gout .resto-main {
+  padding: 0 16px;
+  background-color: #f6f6f6;
+}
+@media (max-width: 1000px) {
+  #page-menu-gout .menus {
+    grid-template-columns: 1fr;
+  }
+}
+#page-menu-gout .menus h3 {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+#page-menu-gout .menus h3::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  height: 5px;
+  width: 46px;
+  background-color: #99e2d0;
+}
+#page-menu-gout .menus .menus_categorie {
+  overflow: hidden;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte {
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 8px;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte .menu_carte_prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte .menu-carte_description {
+  padding: 16px;
+  overflow: hidden;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte .menu-carte_description h4,
+#page-menu-gout .menus .menus_categorie .menu-carte .menu-carte_description p {
+  padding: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte .menu-carte_validation {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background-color: #99e2d0;
+  border-radius: 0 16px 16px 0;
+  margin-right: -68px;
+  width: 68px;
+  transition: margin-right 0.5s;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte .menu-carte_validation i {
+  display: grid;
+  place-items: center;
+  background: white;
+  aspect-ratio: 1;
+  width: 32px;
+  border-radius: 16px;
+  color: #99e2d0;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte:hover {
+  cursor: pointer;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte:hover .menu-carte_validation {
+  margin-right: 0;
+}
+#page-menu-gout .menus .menus_categorie .menu-carte:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#page-menu-gout section.commander {
+  height: 25vh;
+  display: grid;
+  place-items: center;
+}
+#page-menu-gout section.commander button {
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 16px;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+#page-menu-gout section.commander button:hover {
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */

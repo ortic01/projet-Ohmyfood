@@ -1,0 +1,85 @@
+@import "../utils/gradien.scss";
+
+.carte {
+  background-color: #f6f6f6;
+  h2 {
+    margin-bottom: 32px;
+    padding-top: 60px;
+  }
+
+  .carte__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    @media (max-width: 867px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .new {
+      position: relative;
+    }
+    .new::before {
+      content: "Nouveau";
+      position: absolute;
+      height: 32px;
+      width: 80px;
+      background-color: #99e2d0;
+      color: #006400;
+      display: grid;
+      place-items: center;
+      right: 16px;
+      top: 16px;
+    }
+  }
+  .menus {
+    & .image {
+      height: 240px;
+      background-size: cover;
+      border-radius: 16px 16px 0 0;
+    }
+    & .image1 {
+      background-image: url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    }
+    & .image2 {
+      background-image: url(./images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    }
+    & .image3 {
+      background-image: url(./images/stil-u2Lp8tXIcjw-unsplash.jpg);
+    }
+    & .image4 {
+      background-image: url(./images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    }
+  }
+  & .description {
+    position: relative;
+    background-color: white;
+    height: 85px;
+    border-radius: 0 0 16px 16px;
+    i {
+      font-size: 32px;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .fa-solid {
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+      @include gradient(1);
+    }
+    &:hover .fa-solid {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.2);
+    }
+    h3,
+    p {
+      padding: 8px;
+    }
+    h3 {
+      padding-top: 16px;
+    }
+  }
+}

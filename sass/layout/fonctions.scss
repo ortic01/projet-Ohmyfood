@@ -1,0 +1,49 @@
+@import "../utils/zoom.scss";
+@import "../utils/box-shadow.scss";
+@import "../utils/variable.scss";
+@import "../utils/color.scss";
+
+.fonctions {
+    counter-reset: nums;
+    margin-bottom: 32px;
+    & ol {
+        display: flex;
+        gap: 24px;
+        @media (max-width: 1000px) {
+        flex-direction: column;
+        }
+    }
+    & li {
+        position: relative;
+        &::before {
+        content: counter(nums);
+        counter-increment: nums;
+        color: white;
+        background-color: $purple;
+        width: 2 * $fonction-height;
+        height: 2 * $fonction-height;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 6px;
+        left: -1 * $fonction-height;
+        transform: translateY(-50%);
+    }
+        list-style: none;
+        background-color: #f6f6f6;
+        padding: 24px 32px;
+        flex-grow: 1;
+        border-radius: 16px;
+        @include base-shadow;
+        margin-right: 35px;
+        &:hover {
+            @include zoom
+        }
+        & i {
+            margin-right: 16px;
+            color: $lighgrey;
+            font-size: 24px;
+        }
+    }
+}
