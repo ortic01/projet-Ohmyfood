@@ -1,0 +1,73 @@
+@mixin  zoom($zoom-level: 1.02, $transformation: null) {
+    transform: $transformation scale($zoom-level); 
+ }
+
+ @mixin gradient($opacity) {
+    background-image: linear-gradient(
+      to top, 
+      rgba(147, 86, 220, $opacity),
+      rgba(255, 121, 218, $opacity) 
+     );
+}
+
+@import "../utils/color.scss";
+
+@mixin base-shadow {
+    box-shadow: 2px 1px 8px -3px $lighgrey;
+}
+
+@mixin fleche($font-weight: 400)  {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+}
+
+@mixin coeur ($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include fleche($font-weight);
+    content: "\f004";
+    font-size: 32px;
+    right: 30px;
+    top: 42%;
+    transform: translateY(-50%);
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
+}
+@mixin coeur-animation  {
+    position: relative;
+    background-color: white;
+    height: 85px;
+    border-radius: 0 0 16px 16px;
+    &::before {
+      @include coeur;
+    }
+    &::after {
+      @include coeur($opacity: 0, $font-weight: 900, $color: transparent);
+      @include gradient(1);
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }  
+}
+@mixin apparition {
+  $numberoflists: 3;
+        @for $i from 1 through $numberoflists {
+          &:nth-child(#{$i}) {
+            animation-delay: 100ms * 
+            $i;
+          }
+        }
+}
+ 
+
+
+  
+   

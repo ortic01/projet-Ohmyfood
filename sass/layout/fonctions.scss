@@ -1,15 +1,14 @@
-@import "../utils/zoom.scss";
-@import "../utils/box-shadow.scss";
+@import "../utils/mixins.scss";
 @import "../utils/variable.scss";
 @import "../utils/color.scss";
 
 .fonctions {
     counter-reset: nums;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
     & ol {
         display: flex;
         gap: 24px;
-        @media (max-width: 1000px) {
+        @media (max-width: 1018px) {
         flex-direction: column;
         }
     }
@@ -38,7 +37,7 @@
         @include base-shadow;
         margin-right: 35px;
         &:hover {
-            @include zoom
+            @include zoom;
         }
         & i {
             margin-right: 16px;
