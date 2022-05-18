@@ -20,6 +20,10 @@ a {
   color: inherit;
 }
 
+h2 {
+  padding: 0 15px;
+}
+
 h3 {
   margin: 0;
 }
@@ -32,16 +36,17 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 8px;
   padding: 2.8px;
   position: relative;
-}
-
-h2 {
-  padding: 0 10px;
 }
 
 main .ville {
@@ -53,7 +58,7 @@ main .ville {
   text-align: center;
 }
 main .ville i {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 @keyframes appearance {
@@ -170,6 +175,9 @@ main .ville i {
 }
 .fonctions li {
   position: relative;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
   list-style: none;
   background-color: #f6f6f6;
   padding: 24px 32px;
@@ -195,6 +203,10 @@ main .ville i {
 }
 .fonctions li:hover {
   transform: scale(1.02);
+  background-color: #e4d5f6;
+}
+.fonctions li:hover i {
+  color: #9356dc;
 }
 .fonctions li i {
   margin-right: 16px;
@@ -310,13 +322,14 @@ main .ville i {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-.carte .description h3,
 .carte .description p {
   padding: 8px;
   padding-bottom: 0;
+  padding-left: 14px;
 }
 .carte .description h3 {
-  padding-top: 16px;
+  padding-top: 15px;
+  margin-left: 14px;
 }
 
 footer {
@@ -327,7 +340,7 @@ footer {
 footer h2 {
   font-family: "shrikhand", "sans-serif";
   font-weight: 500;
-  padding-bottom: 16px;
+  padding-bottom: 3px;
 }
 footer p {
   margin: 16px;
