@@ -45,6 +45,7 @@
     background-color: white;
     height: 85px;
     border-radius: 0 0 16px 16px;
+    margin-top: -29px;
     &::before {
       @include coeur;
     }
