@@ -21,7 +21,8 @@ a {
 }
 
 h2 {
-  padding: 0 15px;
+  padding: 0 26px;
+  padding-top: 22px;
 }
 
 h3 {
@@ -41,6 +42,10 @@ h5 {
   font-weight: 500;
 }
 
+h6 {
+  padding: 0 13px;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -55,6 +60,7 @@ main .ville {
   justify-content: center;
   gap: 16px;
   background-color: #EAEAEA;
+  height: 60px;
   text-align: center;
 }
 main .ville i {
@@ -83,13 +89,13 @@ main .ville i {
 }
 .explorer {
   background-color: #f6f6f6;
-  height: 325px;
+  height: 300px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 15px;
 }
 .explorer h2 {
   margin: 0px;
-  font-size: 32px;
+  font-size: 25px;
 }
 .explorer p {
   font-size: 16px;
@@ -98,11 +104,13 @@ main .ville i {
 .explorer button {
   color: white;
   font-weight: 300;
-  font-size: 24px;
+  width: 211px;
+  font-size: 15px;
+  font-family: "roboto", "sans-serif";
   padding: 16px 24px;
   border: none;
   border-radius: 30px;
-  margin-top: 16px;
+  margin-top: 22px;
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -220,11 +228,10 @@ main .ville i {
 }
 @media (max-width: 600px) {
   #homepage .carte {
-    height: 1570px;
+    height: 1432px;
   }
 }
 #homepage .carte h2 {
-  margin-bottom: 32px;
   padding-top: 50px;
 }
 #homepage .carte .carte__menu {
@@ -338,10 +345,11 @@ footer {
   padding: 16px 10px;
   color: white;
 }
-footer h2 {
+footer h6 {
   font-family: "shrikhand", "sans-serif";
   font-weight: 500;
-  padding-bottom: 3px;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 footer p {
   margin: 16px;
@@ -570,11 +578,13 @@ div.commande {
 div.commande button {
   color: white;
   font-weight: 300;
-  font-size: 24px;
+  width: 211px;
+  font-size: 15px;
+  font-family: "roboto", "sans-serif";
   padding: 16px 24px;
   border: none;
   border-radius: 30px;
-  margin-top: 16px;
+  margin-top: 22px;
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
