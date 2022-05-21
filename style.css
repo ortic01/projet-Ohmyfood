@@ -214,34 +214,34 @@ main .ville i {
   font-size: 24px;
 }
 
-.carte {
+#homepage .carte {
   background-color: #f6f6f6;
   height: 864px;
 }
 @media (max-width: 600px) {
-  .carte {
+  #homepage .carte {
     height: 1570px;
   }
 }
-.carte h2 {
+#homepage .carte h2 {
   margin-bottom: 32px;
   padding-top: 50px;
 }
-.carte .carte__menu {
+#homepage .carte .carte__menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin: 25px;
 }
 @media (max-width: 650px) {
-  .carte .carte__menu {
+  #homepage .carte .carte__menu {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.carte .carte__menu .new {
+#homepage .carte .carte__menu .new {
   position: relative;
 }
-.carte .carte__menu .new::before {
+#homepage .carte .carte__menu .new::before {
   content: "Nouveau";
   position: absolute;
   height: 32px;
@@ -253,32 +253,32 @@ main .ville i {
   right: 16px;
   top: 16px;
 }
-.carte .menus .image {
+#homepage .carte .menus .image {
   height: 240px;
   background-size: cover;
   background-position: center;
   border-radius: 16px 16px 0 0;
 }
-.carte .menus .image1 {
+#homepage .carte .menus .image1 {
   background-image: url(./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-.carte .menus .image2 {
+#homepage .carte .menus .image2 {
   background-image: url(./images/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
-.carte .menus .image3 {
+#homepage .carte .menus .image3 {
   background-image: url(./images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
-.carte .menus .image4 {
+#homepage .carte .menus .image4 {
   background-image: url(./images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
-.carte .description {
+#homepage .carte .description {
   position: relative;
   background-color: white;
   height: 85px;
   border-radius: 0 0 16px 16px;
   margin-top: -29px;
 }
-.carte .description::before {
+#homepage .carte .description::before {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -298,7 +298,7 @@ main .ville i {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.carte .description::after {
+#homepage .carte .description::after {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -319,16 +319,16 @@ main .ville i {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-.carte .description:hover::after {
+#homepage .carte .description:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-.carte .description p {
+#homepage .carte .description p {
   padding: 8px;
   padding-bottom: 0;
   padding-left: 14px;
 }
-.carte .description h3 {
+#homepage .carte .description h3 {
   padding-top: 15px;
   margin-left: 14px;
 }
